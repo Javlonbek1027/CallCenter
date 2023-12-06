@@ -20,7 +20,6 @@ public interface EducationRepository extends JpaRepository<EducationCenter, UUID
     List<EducationProjection> getAllByRegion(Regions region);
 
     @Query(value = """
-
             select es.id as id, es.name as name, es.location as location, es.phone_number as phone
             from education_center es
             where es.region = :region
